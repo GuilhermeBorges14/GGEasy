@@ -1,0 +1,32 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background: #19192b;
+  z-index: 100;
+  top: 0px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+
+.logo {
+  margin: 5px;
+}
+
+.login {
+  color: white;
+  font-size: 20px;
+}
+
+.login::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 20px;
+  background: url("../assets/User.svg") no-repeat center center;
+  margin-left: 6px;
+}
