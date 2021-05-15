@@ -5,6 +5,8 @@ import LoginRegister from "./LoginRegister";
 import LoginLostPassword from "./LoginLostPassword";
 import LoginResetPassword from "./LoginResetPassword";
 import { UserContext } from "../../UserContext";
+import style from "./Login.module.css";
+import { ReactComponent as LogoLogin } from "../../assets/LogoLogin.svg";
 
 const Login = () => {
   const { login } = React.useContext(UserContext);
@@ -12,14 +14,22 @@ const Login = () => {
   if (login === true) return <Navigate to="/minhaconta" />;
 
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<LoginForm />}></Route>
-        <Route path="/cadastrar" element={<LoginRegister />}></Route>
-        <Route path="/perdeuasenha" element={<LoginLostPassword />}></Route>
-        <Route path="/resetar" element={<LoginResetPassword />}></Route>
-      </Routes>
-    </div>
+    <section className={style.container}>
+      <div className={style.loginbg}>
+        <LogoLogin className={style.logologin} />
+        <h1 className={style.title}>GGEASY</h1>
+      </div>
+      <div>
+        <div className={style.forms}>
+          <Routes>
+            <Route path="/" element={<LoginForm />}></Route>
+            <Route path="/cadastrar" element={<LoginRegister />}></Route>
+            <Route path="/perdeuasenha" element={<LoginLostPassword />}></Route>
+            <Route path="/resetar" element={<LoginResetPassword />}></Route>
+          </Routes>
+        </div>
+      </div>
+    </section>
   );
 };
 

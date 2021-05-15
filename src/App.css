@@ -1,12 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0px;
-  padding-top: 5rem;
+  padding-top: 4.9rem;
   background: #1d1d35;
   color: white;
+  --font1: "Roboto", sans-serif;
+  --font2: "PT Serif", serif;
+  font-family: var(--font1);
 }
 
 h1,
@@ -26,6 +32,7 @@ li {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 img {
@@ -164,4 +171,25 @@ input {
   content: " ";
   position: absolute;
   top: 450px;
+}
+
+.animationLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animationLeft 0.3s forwards;
+}
+
+@keyframes animationLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.title {
+  font-family: var(--font2);
+  line-height: 1;
+  font-size: 3rem;
+  margin: 1rem 0;
+  position: relative;
 }

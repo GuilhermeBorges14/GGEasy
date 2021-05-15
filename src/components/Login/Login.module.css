@@ -1,0 +1,43 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+.loginbg {
+  grid-column: 1;
+  background: #0d0d1b;
+  display: grid;
+}
+
+.forms {
+  max-width: 30rem;
+  padding: 2rem;
+}
+
+.logologin {
+  justify-self: center;
+  align-self: center;
+}
+
+.title {
+  font-size: 6rem;
+  color: rgb(255, 196, 0);
+  justify-self: center;
+}
+
+@media (max-width: 40rem) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 0rem;
+  }
+
+  .forms {
+    max-width: 100%;
+  }
+
+  .loginbg {
+    display: none;
+  }
+}
