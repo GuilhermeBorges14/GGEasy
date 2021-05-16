@@ -1,0 +1,132 @@
+.nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.nav a,
+.nav button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border: 1px solid transparent;
+  background: #7b40d0;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.nav a:hover,
+.nav a:focus,
+.nav button:hover,
+.nav button:focus {
+  background: transparent;
+  border: 2px solid rgb(255, 196, 0);
+}
+
+.nav a.active {
+  background: rgb(255, 196, 0);
+}
+
+.nav a.active svg > * {
+  fill: #19192b;
+}
+
+.mobileButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border: 1px solid transparent;
+  background: #7b40d0;
+  transition: 0.1s;
+  cursor: pointer;
+  padding: 0px;
+}
+
+.mobileButton::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 1.2rem;
+  border-radius: 2px;
+  background: white;
+  box-shadow: 0 6px white, 0 -6px white;
+  transition: 0.2s;
+}
+
+.mobileButton:focus::after,
+.mobileButton:hover::after {
+  background: white;
+  box-shadow: 0 6px white, 0 -6px white;
+}
+
+.mobileButton:focus,
+.mobileButton:hover,
+.mobileButtonActive {
+  outline: none;
+  background: #7b40d0;
+  border-color: #7b40d0;
+}
+
+.mobileButtonActive::after {
+  transform: rotate(-90deg);
+  background: white;
+  width: 4px;
+  height: 4px;
+  box-shadow: 0 8px white, 0 -8px white;
+}
+
+.navMobile {
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  background: #7b40d0;
+  border-radius: 0.2rem;
+  transform: translateX(-10px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navMobileActive {
+  transition: 0.3s;
+  transform: initial;
+  opacity: 1;
+  pointer-events: initial;
+  z-index: 100;
+}
+
+.navMobile a,
+.navMobile button {
+  display: flex;
+  align-items: center;
+  background: none;
+  color: white;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.navMobile a:hover,
+.navMobile button:hover {
+  color: #19192b;
+  background: rgb(255, 196, 0);
+}
+
+.navMobile a:hover svg > *,
+.navMobile button:hover svg > * {
+  fill: #19192b;
+}
+
+.navMobile button {
+  border-bottom: none;
+}
+
+.navMobile svg > * {
+  fill: white;
+}
