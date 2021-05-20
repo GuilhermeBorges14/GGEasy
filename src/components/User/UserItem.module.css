@@ -1,0 +1,25 @@
+.item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.file {
+  margin-bottom: 1.5rem;
+}
+
+.preview {
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center center;
+  max-width: 80%;
+  margin-left: 5rem;
+}
+
+.preview::after {
+  content: "";
+  display: block;
+  height: 0px;
+  padding-bottom: 100%;
+}
