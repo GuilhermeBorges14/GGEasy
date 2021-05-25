@@ -1,0 +1,30 @@
+.card {
+  background: #393954;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+img {
+  border-radius: 10px;
+}
+
+.title {
+  margin-bottom: 3%;
+  margin-top: 3%;
+  margin-left: 10%;
+}
+
+.price {
+  color: rgb(255, 196, 0);
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  margin-left: 10%;
+  margin-bottom: 3%;
+}

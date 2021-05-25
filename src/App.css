@@ -52,6 +52,10 @@ input {
   margin: 0 auto;
 }
 
+.mainContainer {
+  margin-top: 4rem;
+}
+
 .stars2,
 .stars {
   position: relative;

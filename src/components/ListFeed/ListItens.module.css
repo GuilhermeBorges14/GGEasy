@@ -1,0 +1,13 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 320px);
+  gap: 2rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+@media (max-width: 40rem) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
