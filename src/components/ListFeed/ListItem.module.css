@@ -1,6 +1,6 @@
 .card {
   background: #393954;
-  border-radius: 10px;
+  border-radius: 0.2rem;
   padding: 5px;
   cursor: pointer;
   transition: all 0.5s;
@@ -12,7 +12,7 @@
 }
 
 img {
-  border-radius: 10px;
+  border-radius: 0.2rem;
 }
 
 .title {

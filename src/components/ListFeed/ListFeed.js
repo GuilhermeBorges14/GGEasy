@@ -7,7 +7,7 @@ const ListFeed = () => {
 
   return (
     <div>
-      {modal && <ItemModal photo={modal} />}
+      {modal && <ItemModal photo={modal} setModal={setModal} />}
       <ListItens setModal={setModal} />
     </div>
   );
