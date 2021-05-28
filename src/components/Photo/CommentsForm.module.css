@@ -1,0 +1,53 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: stretch;
+  margin: 1rem;
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-family: var(--font2);
+  resize: none;
+  border: 1px solid #0f0f24;
+  background: #0f0f24;
+  color: white;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  transition: 0.2s;
+}
+
+.textarea:focus,
+.textarea:hover {
+  outline: none;
+  border-color: rgb(255, 196, 0);
+}
+
+.btn {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+}
+
+.btn:focus,
+.btn:hover {
+  outline: none;
+}
+
+.btn:focus svg,
+.btn:hover svg {
+  animation: blink 1s infinite;
+  fill: rgb(255, 196, 0);
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
