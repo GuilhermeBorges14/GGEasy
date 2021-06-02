@@ -1,5 +1,5 @@
 import React from "react";
-import { PHOTO_MODAL_GET } from "../../api";
+import { PHOTO_GET, PHOTO_MODAL_GET } from "../../api";
 import useFetch from "../../Hooks/useFetch";
 import Error from "../Helpers/Error";
 import Loading from "../Helpers/Loading";

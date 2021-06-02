@@ -6,25 +6,27 @@ import Loading from "../Helpers/Loading";
 import ListItem from "./ListItem";
 import style from "./ListItens.module.css";
 
-const ListItens = ({ setModal }) => {
+const ListItens = ({ page, user, setModal, setInfinite }) => {
   const { data, loading, error, request } = useFetch();
 
   React.useEffect(() => {
     async function fetchItem() {
-      const { url, options } = PHOTO_GET({ page: 1, total: 6, user: 0 });
-      const { json } = await request(url, options);
+      const total = 8;
+      const { url, options } = PHOTO_GET({ page, total, user });
+      const { response, json } = await request(url, options);
+      if (response && response.ok && json < total) setInfinite(false);
       console.log(json);
     }
     fetchItem();
-  }, [request]);
+  }, [request, user, page, setInfinite]);
 
   if (error) return <Error error={error} />;
   if (loading) return <Loading />;
   if (data)
     return (
       <ul className={`${style.list} animationLeft`}>
-        {data.map((item) => (
-          <ListItem key={item.id} item={item} setModal={setModal} />
+        {data.map((photo) => (
+          <ListItem key={photo.id} photo={photo} setModal={setModal} />
         ))}
       </ul>
     );

@@ -1,0 +1,34 @@
+.imageContent {
+  display: grid;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  grid-area: 1/1;
+  opacity: 0;
+  transition: 0.02s;
+}
+
+.skeleton {
+  grid-area: 1/1;
+  height: 100%;
+  background-image: linear-gradient(
+    90deg,
+    #4c4c61 0px,
+    #3f3f58 50%,
+    #4c4c61 100%
+  );
+  background-color: #4c4c61;
+  background-size: 200%;
+  animation: skeleton 1.5s infinite linear;
+}
+
+@keyframes skeleton {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -200%;
+  }
+}

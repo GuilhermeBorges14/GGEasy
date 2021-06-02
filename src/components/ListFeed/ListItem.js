@@ -1,16 +1,17 @@
 import React from "react";
+import Image from "../Helpers/Image";
 import style from "./ListItem.module.css";
 
-const ListItem = ({ item, setModal }) => {
+const ListItem = ({ photo, setModal }) => {
   function modal() {
-    setModal(item);
+    setModal(photo);
   }
 
   return (
     <li className={style.card} onClick={modal}>
-      <img src={item.src} alt={item.title} />
-      <h3 className={style.title}>{item.title}</h3>
-      <p className={style.price}>R$ {item.preco}</p>
+      <Image src={photo.src} alt={photo.title} />
+      <h3 className={style.title}>{photo.title}</h3>
+      <p className={style.price}>R$ {photo.preco}</p>
     </li>
   );
 };
