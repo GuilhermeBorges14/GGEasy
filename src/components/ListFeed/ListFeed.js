@@ -1,6 +1,7 @@
 import React from "react";
 import ListItens from "./ListItens";
 import ItemModal from "./ItemModal";
+import PropTypes from "prop-types";
 
 const ListFeed = ({ user }) => {
   const [modal, setModal] = React.useState(null);
@@ -46,6 +47,17 @@ const ListFeed = ({ user }) => {
       ))}
     </div>
   );
+};
+
+ListFeed.defaultProps = {
+  user: 0,
+};
+
+ListFeed.propTypes = {
+  user: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
+  ]),
 };
 
 export default ListFeed;

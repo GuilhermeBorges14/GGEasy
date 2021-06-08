@@ -4,6 +4,10 @@
   padding: 0 2rem;
 }
 
+.single.comments {
+  padding: 0px;
+}
+
 .comments li {
   line-height: 1.2rem;
   margin-bottom: 0.5rem;

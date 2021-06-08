@@ -73,6 +73,12 @@ export function PHOTO_GET({ page, total, user }) {
   };
 }
 
+export function PHOTO_PAGE_GET(id) {
+  return {
+    url: `${URL_API}/api/photo/${id}`,
+  };
+}
+
 export function PHOTO_MODAL_GET(id) {
   return {
     url: `${URL_API}/api/photo/${id}`,

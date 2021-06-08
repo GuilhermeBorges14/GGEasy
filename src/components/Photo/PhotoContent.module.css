@@ -6,10 +6,22 @@
   display: grid;
   grid-template-columns: 36rem 20rem;
   grid-template-rows: auto 1fr auto;
-  overflow: hidden;
+  /*overflow: hidden;*/
   opacity: 0;
   transform: scale(0.8);
   animation: photoEnter 0.3s forwards;
+}
+
+.single.photo {
+  grid-template-rows: 1fr;
+  height: auto;
+  background: transparent;
+  justify-content: center;
+}
+
+.imageSize {
+  width: 36rem;
+  height: 36rem;
 }
 
 @keyframes photoEnter {
@@ -23,11 +35,18 @@
   padding: 2rem 2rem 0 2rem;
 }
 
+.single.details {
+  padding: 1rem 0px 0px 0px;
+}
+
 .img {
   grid-row: 1/4;
 }
-.comments {
-  padding: 0 2rem;
+
+.single .img {
+  grid-row: 1;
+  border-radius: 0.4rem;
+  overflow: hidden;
 }
 
 .author {
@@ -87,5 +106,10 @@
 
   .img {
     grid-row: 1;
+  }
+
+  .imageContent {
+    width: 23rem;
+    height: 23rem;
   }
 }
